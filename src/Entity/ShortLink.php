@@ -54,7 +54,7 @@ class ShortLink
     {
         $this->setCreatedAt(new \DateTime());
         $this->setUpdatedAt(new \DateTime());
-
+        $this->setShortCode(bin2hex(random_bytes(2)));
         $this->statistics = new ArrayCollection();
     }
 

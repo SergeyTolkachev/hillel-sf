@@ -31,6 +31,8 @@ class ShortLinkCrudController extends AbstractController
 
     /**
      * @Route(path="/short-link/new", methods={"GET","POST"})
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
      */
     public function create(Request $request)
     {
