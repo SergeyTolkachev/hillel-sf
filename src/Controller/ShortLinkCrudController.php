@@ -74,4 +74,16 @@ class ShortLinkCrudController extends AbstractController
 
         return $this->render('short-link/edit.html.twig', ['form' => $form->createView()]);
     }
+
+    /**
+     * @Route(name="short_link_delete", path="/short-link/{shortLink}/delete", methods={"GET","POST"})
+     */
+    public function delete(Request $request, ShortLink $shortLink)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($shortLink);
+        $em->flush();
+
+        return $this->redirectToRoute('short_links_list');
+    }
 }

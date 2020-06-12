@@ -16,7 +16,7 @@ class ShortLinkType extends AbstractType
 
         $builder
             ->add('fullUrl')
-            ->add('shortCode', TextType::class, ['help' => 'This string is generated automatically and cannot
+            ->add('shortCode', TextType::class, ['help' => 'This string is generated automatically and can not
              be changed.', 'disabled'=>true])
 //            ->add('createdAt')
 //            ->add('updatedAt')
